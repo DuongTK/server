@@ -1,0 +1,16 @@
+app.domain: https://gp600.ivynative.com
+
+spring:
+  application:
+    name: gp600-server
+  cloud:
+    config:
+      uri: http://config-server.tox.rancher.internal:8801
+  data:
+    rest:
+      base-path: /api
+  profiles:
+    active: production,topica-oauth-auth
+
+spring.http.multipart.max-file-size: 128MB
+spring.http.multipart.max-request-size: 128MB

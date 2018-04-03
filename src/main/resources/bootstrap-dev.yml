@@ -1,0 +1,16 @@
+app.domain: http://localhost:8080
+
+spring:
+  application:
+    name: gp600-server
+  cloud:
+    config:
+      uri: http://localhost:8801
+  data:
+    rest:
+      base-path: /api
+  profiles:
+    active: development,topica-oauth-auth
+
+spring.http.multipart.max-file-size: 128KB
+spring.http.multipart.max-request-size: 128KB
